@@ -1,64 +1,96 @@
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Presentation.exe.config
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Presentation.exe
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Presentation.pdb
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Business Access Layer.dll
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Business Entity Layer.dll
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Business Access Layer.pdb
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Business Entity Layer.pdb
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csprojAssemblyReference.cache
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Company Details.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Alert.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Confirm.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Failed.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Success.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Warning.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\App.g.cs
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.cache
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.lref
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Company Details.baml
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Alert.baml
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Confirm.baml
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Failed.baml
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Success.baml
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\PopUps\Warning.baml
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.g.resources
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing_Presentation.Properties.Resources.resources
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csproj.GenerateResource.cache
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csproj.CopyComplete
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.exe
-C:\Users\Dell\source\repos\Billing Presentation\obj\Debug\Billing Presentation.pdb
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Data Access Layer.dll
-C:\Users\Dell\source\repos\Billing Presentation\bin\Debug\Billing Data Access Layer.pdb
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Presentation.exe.config
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Presentation.exe
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Presentation.pdb
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Access Layer.dll
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Entity Layer.dll
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Data Access Layer.dll
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Access Layer.pdb
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Entity Layer.pdb
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Data Access Layer.pdb
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csprojAssemblyReference.cache
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Company Details.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Alert.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Confirm.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Failed.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Success.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Warning.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\App.g.cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.cache
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.lref
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Company Details.baml
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Alert.baml
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Confirm.baml
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Failed.baml
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Success.baml
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Warning.baml
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.g.resources
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing_Presentation.Properties.Resources.resources
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.GenerateResource.cache
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.CopyComplete
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.exe
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.pdb
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Presentation.exe.config
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Presentation.exe
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Presentation.pdb
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Business Access Layer.dll
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Business Entity Layer.dll
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Business Access Layer.pdb
+C:\Users\ABHISHEK\source\repos\Billing Presentation\bin\Debug\Billing Business Entity Layer.pdb
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csprojAssemblyReference.cache
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\MainWindow.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\App.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.cache
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.lref
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\MainWindow.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.g.resources
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing_Presentation.Properties.Resources.resources
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csproj.GenerateResource.cache
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csproj.CoreCompileInputs.cache
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.csproj.CopyComplete
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.exe
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Billing Presentation.pdb
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\NewCustomerRegistration.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\NewCustomerRegistration.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Alert.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Confirm.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Failed.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Success.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Warning.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Alert.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Confirm.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Failed.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Success.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PopUps\Warning.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\SearchCustomer.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\SearchCustomer.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Promotions\CreatePromotion.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Promotions\CreatePromotion.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Promotions\IndividualPromotion.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Promotions\IndividualPromotion.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Dashboard.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Dashboard.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\ConnectionStatus.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\ConnectionStatus.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\CreditReturns.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\CreditReturns.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PriceOverride.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\PriceOverride.baml
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Promotions\MultiplePromotion.g.cs
+C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\Promotions\MultiplePromotion.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Presentation.exe.config
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Presentation.exe
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Presentation.pdb
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Access Layer.dll
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Entity Layer.dll
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Access Layer.pdb
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\bin\Debug\Billing Business Entity Layer.pdb
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csprojAssemblyReference.cache
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\ConnectionStatus.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\CreditReturns.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Dashboard.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\MainWindow.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\NewCustomerRegistration.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Alert.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Confirm.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Failed.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Success.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Warning.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PriceOverride.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\CreatePromotion.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\IndividualPromotion.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\MultiplePromotion.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\SearchCustomer.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\App.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.cache
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation_MarkupCompile.lref
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\ConnectionStatus.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\CreditReturns.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Dashboard.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\MainWindow.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\NewCustomerRegistration.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Alert.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Confirm.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Failed.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Success.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PopUps\Warning.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\PriceOverride.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\CreatePromotion.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\IndividualPromotion.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\MultiplePromotion.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\SearchCustomer.baml
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.g.resources
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing_Presentation.Properties.Resources.resources
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.GenerateResource.cache
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.CoreCompileInputs.cache
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.CopyComplete
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.exe
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.pdb

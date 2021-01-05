@@ -1,0 +1,118 @@
+﻿<Window x:Class="Billing_Presentation.CreditReturns"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Billing_Presentation"
+        mc:Ignorable="d"
+        Title="CreditReturns" WindowState="Maximized"
+        Height="600" 
+        Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#f90"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border Background="White" Height="520" Width="520" CornerRadius="8" Padding="20"
+                BorderBrush="#f90" BorderThickness="0,15,0,0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#b8afaf"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <TextBlock Text="Credit Returns" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold"
+                           Margin="0, 50, 0, 0" />
+
+                <StackPanel>
+                    
+                    <!--Customer Name-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Customer Name :" FontSize="18" Width="155" Margin="20,50,0,0" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBox Name="CustomerName" Width="210" FontSize="16" Height="35" Padding="5, 5" 
+                                 Margin="50, 50, 0, 0" KeyUp="customerNameKeyup"/>
+                        <TextBlock IsHitTestVisible="False" FontSize="16" Text="Enter Name" Margin="-200,45,0,0" Foreground="#c8cccf" Height="20">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=CustomerName}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!--Customer Number-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Customer Number :" FontSize="18" Width="155" Margin="20,50,0,0" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBox Name="CustomerNumber" Width="210" FontSize="16" Height="35" Padding="5, 5" 
+                                 Margin="50, 50, 0, 0" MaxLength="10" KeyUp="customerNumberKeyup" 
+                                 PreviewTextInput="NumberValidation"/>
+                        <TextBlock IsHitTestVisible="False" FontSize="16" Text="Enter MobileNo" Margin="-200,45,0,0" Foreground="#c8cccf" Height="20">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=CustomerNumber}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!--Credit Amount-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Credit Amount :" FontSize="18" Width="155" Margin="20,50,0,0" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBox Name="CreditAmount" Width="210" FontSize="16" Height="35" Padding="5, 5" 
+                                 Margin="50, 50, 0, 0" MaxLength="4" KeyUp="creditAmountKeyup" PreviewTextInput="NumberValidation"/>
+                        <TextBlock IsHitTestVisible="False" FontSize="16" Text="eg. 1000" Margin="-200,45,0,0" Foreground="#c8cccf" Height="20">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=CreditAmount}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" >
+                    <Button Content="Submit" Width="115" Margin="80, 50, 0, 0"  
+                            Background="#f90" Foreground="White" FontSize="15" FontWeight="Bold" 
+                            BorderBrush="#f90" Height="40" Click="submit"/>
+                    <Button Content="Clear" Width="115" Margin="100, 50, 0, 0"  
+                            Background="#f90" Foreground="White" FontSize="15" FontWeight="Bold" 
+                            BorderBrush="#f90" Height="40" Click="clear"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Border>
+    </Grid>
+</Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\
 Billing_Presentation
 none
 false
 DEBUG;TRACE
-C:\Users\Dell\Documents\GitHub\business-bricks\Billing Presentation\App.xaml
-6472044484
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\App.xaml
+151359966206
 
-10135998999
-151496995432
-Company Details.xaml;PopUps\Alert.xaml;PopUps\Confirm.xaml;PopUps\Failed.xaml;PopUps\Success.xaml;PopUps\Warning.xaml;
+19-375959607
+161475265579
+ConnectionStatus.xaml;CreditReturns.xaml;Dashboard.xaml;MainWindow.xaml;NewCustomerRegistration.xaml;PopUps\Alert.xaml;PopUps\Confirm.xaml;PopUps\Failed.xaml;PopUps\Success.xaml;PopUps\Warning.xaml;PriceOverride.xaml;Promotions\CreatePromotion.xaml;Promotions\IndividualPromotion.xaml;Promotions\MultiplePromotion.xaml;SearchCustomer.xaml;
 
 False
 

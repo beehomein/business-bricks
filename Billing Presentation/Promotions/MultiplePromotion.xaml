@@ -1,0 +1,132 @@
+﻿<Window x:Class="Billing_Presentation.Promotions.MultiplePromotion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Billing_Presentation.Promotions"
+        mc:Ignorable="d"
+        Title="MultiplePromotion"
+        WindowState="Maximized"
+        Height="600" 
+        Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#f90"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Border Background="White" Height="523" Width="1107" CornerRadius="8" Padding="20"
+                BorderBrush="#f90" BorderThickness="0,15,0,0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="100" Color="#b8afaf"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!--Adding barcodes-->
+
+                <ScrollViewer>
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Add Products" HorizontalAlignment="Center" 
+                               FontSize="20" Margin="0,30,0,20"/>
+                        <StackPanel Name="BarcodeAdd">
+                            <TextBox FontSize="20" Name="Barcode" CharacterCasing="Upper" Width="300" Padding="10, 5" 
+                                     ToolTip="Enter Barcode"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                    Margin="0,10,0,0">
+                            <Button Content="+" Name="Add" Width="50" Padding="5,5" VerticalAlignment="Center"
+                                    HorizontalAlignment="Center" Background="#f90" Foreground="White" FontSize="15" 
+                                    FontWeight="Bold" BorderBrush="#f90" Cursor="Hand" Click="add" />
+
+                            <Button Content="-" Name="Remove" Width="50" Padding="5,5" VerticalAlignment="Center" Height="0"
+                                    HorizontalAlignment="Center" Margin="20,0,0,0" Background="#f90" Foreground="White" 
+                                    FontSize="15" FontWeight="Bold" BorderBrush="#f90" Cursor="Hand" Click="remove" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+
+                <!--offer types-->
+                <StackPanel Grid.Column="1" >
+                    <TextBlock Text="Offer Type" HorizontalAlignment="Center" 
+                               FontSize="20" Margin="0,50,0,20" />
+                    <ComboBox Width="250" Name="offerType" Padding="10, 5" FontSize="15" BorderBrush="#7f7f7f" Cursor="Hand"
+                              DropDownClosed="offerTypeDropDown">
+                        <ComboBox.LayoutTransform>
+                            <ScaleTransform ScaleX="1.4" ScaleY="1.4" />
+                        </ComboBox.LayoutTransform>
+                        <ComboBoxItem IsSelected="True" Content="Flat" />
+                        <ComboBoxItem Content="Buy and Get Free" />
+                    </ComboBox>
+
+
+                    <TextBlock Text="Discount" HorizontalAlignment="Center" 
+                               FontSize="20" Margin="0,100,0,20"/>
+
+                    <!--Flat-->
+                    <StackPanel Name="Flat" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Name="flatDiscount" Width="100" FontSize="18" MaxLength="3" 
+                                 Padding="7" KeyUp="FlatDiscount_KeyUp" PreviewTextInput="NumberValidation"/>
+                        <ComboBox Width="150" Padding="10,5" FontSize="15" Name="discountTypeFlat" Cursor="Hand">
+                            <ComboBox.LayoutTransform>
+                                <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                            </ComboBox.LayoutTransform>
+                            <ComboBoxItem IsSelected="True" Content = "Percentage" />
+                            <ComboBoxItem Content = "Amount" />
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <!--buy and get-->
+                    <StackPanel Name="BuyandGet" Orientation="Horizontal" HorizontalAlignment="Center" Height="0" >
+                        <TextBlock Text="Buy This Combo Get" FontSize="18" VerticalAlignment="Center"/>
+                        <TextBox Name="buy" Width="70" FontSize="18" Padding="10,5" Margin="10,0,0,0"
+                             MaxLength="4" KeyUp="Buy_KeyUp" PreviewTextInput="NumberValidation"/>
+                        <TextBlock Text="Products of" FontSize="18" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <ComboBox FontSize="16" Width="145" Padding="10,10" HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center" Margin="10,0,0,0" IsTextSearchEnabled="True" IsEditable="True" 
+                                  StaysOpenOnEdit="True">
+                            <ComboBoxItem IsSelected="True" IsEnabled="False">Select Barcode</ComboBoxItem>
+                            <ComboBoxItem >B0001</ComboBoxItem>
+                            <ComboBoxItem>B0056</ComboBoxItem>
+                            <ComboBoxItem>B4545</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal" >
+                        <Button Content="Submit" Name="save"  Width="80" Margin="100, 70, 0, 0"  
+                            Background="#f90" Foreground="White" FontSize="15" FontWeight="Bold" 
+                            BorderBrush="#f90" Padding="5,5" Cursor="Hand" Click="submit" />
+                        <Button Content="Close" Name="Close"  Width="80" Margin="200, 70, 0, 0"  
+                            Background="#f90" Foreground="White" FontSize="15" FontWeight="Bold" 
+                            BorderBrush="#f90" Padding="5,5" Cursor="Hand" Click="close" />
+                    </StackPanel>
+
+
+                </StackPanel>
+
+            </Grid>
+
+
+        </Border>
+    </Grid>
+</Window>
