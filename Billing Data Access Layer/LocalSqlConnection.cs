@@ -51,5 +51,7 @@ namespace Billing_Data_Access_Layer
         public const string LIST_INVENTORY = "USP_LIST_INVENTORY";
         public const string UPDATE_INVENTORY = "USP_UPDATE_INVENTORY";
         public const string INTEGRATED_INSERT_AND_UPDATE = "USP_INTEGRATED_INSERT_AND_UPDATE";
+
+        public const string UPDATE_PURCHASE_AND_TRANSFER_DETAILS_QUANTITY = "USP_UPDATE_PURCHASE_AND_TRANSFER_DETAILS_QUANTITY";
     }
 }

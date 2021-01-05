@@ -9,10 +9,11 @@ namespace Billing_Business_Access_Layer
 {
     public class CompanyDetailsBALC
     {
+        Connection connection;
         public int previousCompanyId { get; set; }
         public int InsertCompanyDetails(CompanyDetails companyDetails)
         {
-            Connection connection = new Connection();
+            connection = new Connection();
             previousCompanyId = connection.ListCompanyDetails().Count();
             companyDetails.id = "BBBCL" + previousCompanyId;
             return connection.InsertCompanyDetails(companyDetails);

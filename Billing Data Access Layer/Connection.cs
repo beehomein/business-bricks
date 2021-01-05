@@ -851,5 +851,22 @@ namespace Billing_Data_Access_Layer
 
         #endregion
 
+        #region Stock Inward
+        public int UpdatePurchaseAndTransferDetailsList(string tableName, string barcode, int currentQuantity, int pendingQuantity, string status)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.UPDATE_PURCHASE_AND_TRANSFER_DETAILS_QUANTITY, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("TABLE_NAME", tableName);
+                sqlCommand.Parameters.AddWithValue("BARCODE", barcode);
+                sqlCommand.Parameters.AddWithValue("CURRENT_QUANTITY", currentQuantity);
+                sqlCommand.Parameters.AddWithValue("PENDING_QUANTITY", pendingQuantity);
+                sqlCommand.Parameters.AddWithValue("STATUS", status);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        } 
+        #endregion
     }
 }
