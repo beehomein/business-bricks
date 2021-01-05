@@ -1,2 +1,0 @@
-# business-bricks
-billing application
