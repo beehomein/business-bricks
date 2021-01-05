@@ -1,0 +1,12 @@
+C:\Users\Dell\source\repos\Billing Business Entity Layer\bin\Debug\Billing Business Entity Layer.dll
+C:\Users\Dell\source\repos\Billing Business Entity Layer\bin\Debug\Billing Business Entity Layer.pdb
+C:\Users\Dell\source\repos\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.dll
+C:\Users\Dell\source\repos\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.pdb
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.dll
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Business Entity Layer\obj\Debug\Billing Business Entity Layer.pdb
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Business Entity Layer\bin\Debug\Billing Business Entity Layer.dll
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Business Entity Layer\bin\Debug\Billing Business Entity Layer.pdb

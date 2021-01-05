@@ -1,0 +1,22 @@
+C:\Users\Dell\source\repos\Billing Data Access Layer\bin\Debug\Billing Data Access Layer.dll
+C:\Users\Dell\source\repos\Billing Data Access Layer\bin\Debug\Billing Data Access Layer.pdb
+C:\Users\Dell\source\repos\Billing Data Access Layer\bin\Debug\Billing Business Entity Layer.dll
+C:\Users\Dell\source\repos\Billing Data Access Layer\bin\Debug\Billing Business Entity Layer.pdb
+C:\Users\Dell\source\repos\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.csproj.CopyComplete
+C:\Users\Dell\source\repos\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.dll
+C:\Users\Dell\source\repos\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.pdb
+C:\Users\Dell\source\repos\Billing Data Access Layer\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Dell\source\repos\Billing Data Access Layer\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\bin\Debug\Billing Data Access Layer.dll
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\bin\Debug\Billing Data Access Layer.pdb
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\bin\Debug\Billing Business Entity Layer.dll
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\bin\Debug\Billing Business Entity Layer.pdb
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.csproj.CopyComplete
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.dll
+C:\Users\Dell\Documents\GitHub\business-bricks\Billing Data Access Layer\obj\Debug\Billing Data Access Layer.pdb

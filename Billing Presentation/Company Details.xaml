@@ -1,0 +1,244 @@
+﻿<Window x:Class="Billing_Presentation.Company_Details"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Billing_Presentation"
+        mc:Ignorable="d"
+        Title="Company_Details" Height="680" Width="1280">
+    <Grid
+        Background="White">
+        <StackPanel 
+            Orientation="Vertical" 
+            Margin="50,20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="White">
+            <!--Title-->
+            <StackPanel
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20">
+                <TextBlock
+                    FontSize="28"
+                    Text="Company Details"
+                    HorizontalAlignment="Center"/>
+                <Border 
+                    BorderThickness="1"
+                    BorderBrush="Black"
+                    Width="500"
+                    Height="2"
+                    Margin="0,10">
+                    <Border.Effect>
+                        <DropShadowEffect 
+                            ShadowDepth="-1"
+                            BlurRadius="10"
+                            Color="#f1f1f1"/>
+                    </Border.Effect>
+                </Border>
+
+            </StackPanel>
+            <!--Company Name-->
+            <StackPanel 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20">
+                <!--Company Name Label-->
+                <StackPanel 
+                    Orientation="Horizontal" 
+                    Width="200">
+                    <TextBlock 
+                    Name="companyNameLabel" 
+                    FontSize="18"
+                    Text="Name"/>
+                    <TextBlock 
+                    Name="companyNameMandatory"
+                    Text="*"
+                     Padding="3"
+                    FontWeight="Bold"
+                    Foreground="Red"/>
+                </StackPanel>
+                <!--Company Name Input-->
+                <TextBox 
+                    ToolTip="Maximum length of Company name is 100 Letters"
+                    Name="companyName" 
+                    Padding="20,5"
+                    Width="300" 
+                    FontSize="18"
+                    MaxLength="100"
+                    BorderBrush="Black" 
+                    BorderThickness="1"
+                    PreviewTextInput="onlyTextValidation"
+                    KeyUp="nameValidation"/>
+            </StackPanel>
+            <!--Company Number-->
+            <StackPanel 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20">
+                <!--Company Number Label-->
+                <StackPanel 
+                    Orientation="Horizontal" 
+                    Width="200">
+                    <TextBlock 
+                    Name="companyNumberLabel" 
+                    FontSize="18"
+                    Text="Mobile Number"/>
+                    <TextBlock 
+                    Name="companyNumberMandatory"
+                    Text="*"
+                     Padding="3"
+                    FontWeight="Bold"
+                    Foreground="Red"/>
+                </StackPanel>
+                <!--Company Number Input-->
+                <TextBox 
+                    Name="companyNumber" 
+                    Padding="20,5"
+                    Width="300" 
+                    FontSize="18"
+                    MaxLength="10"
+                    BorderBrush="Black" 
+                    ToolTip="Mobile number must have 10 numbers"
+                    BorderThickness="1"
+                    KeyUp="numberLengthValidation"
+                    PreviewTextInput="mobileNumberValidation"/>
+            </StackPanel>
+            <!--Company Email-->
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20">
+                <!--Company Email Label-->
+                <TextBlock
+                    Name="companyEmailLabel"
+                    FontSize="18"
+                    Width="200"
+                    Text="Email"/>
+                <!--Company Email Input-->
+                <TextBox
+                    Name="companyEmail"
+                    Padding="20,5"
+                    Width="300"
+                    FontSize="18"
+                    MaxLength="100"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    PreviewTextInput="emailValidation"/>
+            </StackPanel>
+            <!--Company Type-->
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20">
+                <!--Company Type Label-->
+                <StackPanel
+                    Orientation="Horizontal"
+                    Width="200">
+                    <TextBlock
+                    Name="companyTypeLabel"
+                    FontSize="18"
+                    Text="Type"/>
+                    <TextBlock 
+                    Name="companyTypeMandatory"
+                    Text="*"
+                     Padding="3"
+                    FontWeight="Bold"
+                    Foreground="Red"/>
+                </StackPanel>
+                <!--Company Type Radio-->
+                <StackPanel
+                    Orientation="Horizontal"
+                    Width="300">
+                    <RadioButton
+                        Width="100"
+                        Name="companyTypeHeadOffice"
+                        Content="Head Office"
+                        Checked="checkCompanyType">
+                        <RadioButton.LayoutTransform>
+                            <ScaleTransform 
+                                ScaleX="1.4" 
+                                ScaleY="1.4"/>
+                        </RadioButton.LayoutTransform>
+                    </RadioButton>
+                    <RadioButton
+                        Width="100"
+                        Name="companyTypeBranch"
+                        Content="Branch"
+                        Checked="checkCompanyType">
+                        <RadioButton.LayoutTransform>
+                            <ScaleTransform 
+                                ScaleX="1.4" 
+                                ScaleY="1.4"/>
+                        </RadioButton.LayoutTransform>
+                    </RadioButton>
+                </StackPanel>
+            </StackPanel>
+            <!--Company Address-->
+            <StackPanel 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20">
+                <!--Company Address Label-->
+                <StackPanel 
+                    Orientation="Horizontal" 
+                    Width="200">
+                    <TextBlock 
+                    Name="companyAddressLabel" 
+                    FontSize="18"
+                    Text="Address"/>
+                    <TextBlock 
+                    Name="companyAddressMandatory"
+                    Text="*"
+                    FontWeight="Bold"
+                    Foreground="Red"/>
+                </StackPanel>
+                <!--Company Address Input-->
+                <TextBox 
+                    TextWrapping="Wrap"
+                    Name="companyAddress" 
+                    Padding="20,5"
+                    Width="300" 
+                    FontSize="18"
+                    Height="100"
+                    MaxLength="255"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    KeyUp="addressLengthValidation"/>
+            </StackPanel>
+            <!--Button Groups-->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal"
+                Margin="20">
+                <Button
+                    Padding="20,5"
+                    Background="#4A3F35"
+                    Foreground="White"
+                    Cursor="Hand"
+                    FontSize="18"
+                    Margin="30,0"
+                    BorderBrush="#4A3F35"
+                    Content="Submit"
+                    Click="addCompanyDetails"/>
+                <Button
+                    Padding="20,5"
+                    Background="#4A3F35"
+                    Foreground="White"
+                    Cursor="Hand"
+                    FontSize="18"
+                    Margin="30,0"
+                    BorderBrush="#4A3F35"
+                    Content="Reset"
+                    Click="resetCompanyDetails"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
