@@ -45,6 +45,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="CompanyDetailsBALC.cs" />
     <Compile Include="CustomersBALC.cs" />
+    <Compile Include="IndividualPromotionsBALC.cs" />
     <Compile Include="InventoryBALC.cs" />
     <Compile Include="NewGstBALC.cs" />
     <Compile Include="NewProductAttributesBALC.cs" />

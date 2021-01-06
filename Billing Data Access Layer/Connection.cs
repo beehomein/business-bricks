@@ -986,7 +986,108 @@ namespace Billing_Data_Access_Layer
                 return sqlCommand.ExecuteNonQuery();
             }
             return 0;
+        }
+        #endregion
+
+        #region Individual Promotions
+        public int InsertIndividualPromotion(IndividualPromotions individualPromotions)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.INSERT_INDIVIDUAL_PROMOTION, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("BARCODE_ID", individualPromotions.barcodeId);
+                sqlCommand.Parameters.AddWithValue("OFFER_TYPE", individualPromotions.offerType);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_TYPE", individualPromotions.discountType);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_VALUE", individualPromotions.discountValue);
+                sqlCommand.Parameters.AddWithValue("QUANTITY", individualPromotions.quantity);
+                sqlCommand.Parameters.AddWithValue("DESCRIPTION", individualPromotions.description);
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", individualPromotions.promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public int UpdateIndividualPromotion(IndividualPromotions individualPromotions)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.UPDATE_INDIVIDUAL_PROMOTION, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("BARCODE_ID", individualPromotions.barcodeId);
+                sqlCommand.Parameters.AddWithValue("OFFER_TYPE", individualPromotions.offerType);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_TYPE", individualPromotions.discountType);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_VALUE", individualPromotions.discountValue);
+                sqlCommand.Parameters.AddWithValue("QUANTITY", individualPromotions.quantity);
+                sqlCommand.Parameters.AddWithValue("DESCRIPTION", individualPromotions.description);
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", individualPromotions.promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public int DeleteIndividualPromotion(string promotionId)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.DELETE_INDIVIDUAL_PROMOTION, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public List<IndividualPromotions> ListIndividualPromotion()
+        {
+            if (connectionStatus)
+            {
+                List<IndividualPromotions> individualPromotionsList = new List<IndividualPromotions>();
+                IndividualPromotions individualPromotions;
+                sqlCommand = new SqlCommand(LocalStoreProcedures.LIST_INDIVIDUAL_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                dataTable = new DataTable("Individual Promotion");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    individualPromotions = new IndividualPromotions();
+                    individualPromotions.barcodeId = row[1].ToString();
+                    individualPromotions.offerType = row[2].ToString();
+                    individualPromotions.discountType = row[3].ToString();
+                    individualPromotions.discountValue = Convert.ToInt32(row[4].ToString());
+                    individualPromotions.quantity = Convert.ToInt32(row[5].ToString());
+                    individualPromotions.description = row[6].ToString();
+                    individualPromotions.promotionId = row[7].ToString();
+                    individualPromotionsList.Add(individualPromotions);
+                }
+                return individualPromotionsList;
+            }
+            return new List<IndividualPromotions>();
+        }
+        public IndividualPromotions SelectIndividualPromotions()
+        {
+            IndividualPromotions individualPromotions = new IndividualPromotions();
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.SELECT_INDIVIDUAL_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                dataTable = new DataTable("Individual Promotion");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+                    individualPromotions.barcodeId = row[1].ToString();
+                    individualPromotions.offerType = row[2].ToString();
+                    individualPromotions.discountType = row[3].ToString();
+                    individualPromotions.discountValue = Convert.ToInt32(row[4].ToString());
+                    individualPromotions.quantity = Convert.ToInt32(row[5].ToString());
+                    individualPromotions.description = row[6].ToString();
+                    individualPromotions.promotionId = row[7].ToString();
+                    return individualPromotions;
+                }
+            }
+            return individualPromotions;
         } 
         #endregion
+
     }
 }

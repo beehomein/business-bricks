@@ -49,6 +49,7 @@
     <Compile Include="Division.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="GST.cs" />
+    <Compile Include="IndividualPromotions.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="NewProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
