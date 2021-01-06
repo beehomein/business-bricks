@@ -53,5 +53,11 @@ namespace Billing_Data_Access_Layer
         public const string INTEGRATED_INSERT_AND_UPDATE = "USP_INTEGRATED_INSERT_AND_UPDATE";
 
         public const string UPDATE_PURCHASE_AND_TRANSFER_DETAILS_QUANTITY = "USP_UPDATE_PURCHASE_AND_TRANSFER_DETAILS_QUANTITY";
+
+        public const string INSERT_CUSTOMERS = "USP_INSERT_CUSTOMERS";
+        public const string LIST_CUSTOMERS = "USP_LIST_CUSTOMERS";
+        public const string SELECT_CUSTOMER = "USP_SELECT_CUSTOMER";
+        public const string UPDATE_LOYALTY_POINTS_OF_CUSTOMER = "USP_UPDATE_LOYALTY_POINTS_OF_CUSTOMER";
+        public const string UPDATE_CUSTOMER_DETAILS = "USP_UPDATE_CUSTOMER_DETAILS";
     }
 }

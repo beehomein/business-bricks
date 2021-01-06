@@ -866,6 +866,126 @@ namespace Billing_Data_Access_Layer
                 return sqlCommand.ExecuteNonQuery();
             }
             return 0;
+        }
+        #endregion
+
+        #region Customers
+        public int InsertCustomer(Customers customers)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.INSERT_CUSTOMERS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("FIRST_NAME", customers.firstName);
+                sqlCommand.Parameters.AddWithValue("LAST_NAME", customers.lastName);
+                sqlCommand.Parameters.AddWithValue("MOBILE_NUMBER", customers.mobileNumber);
+                sqlCommand.Parameters.AddWithValue("OCCUPATION", customers.occupation);
+                sqlCommand.Parameters.AddWithValue("DATE_OF_BIRTH", customers.dateOfBirth);
+                sqlCommand.Parameters.AddWithValue("GENDER", customers.gender);
+                sqlCommand.Parameters.AddWithValue("AGE_GROUP", customers.ageGroup);
+                sqlCommand.Parameters.AddWithValue("COMMUNICATION_TYPE", customers.communicationType);
+                sqlCommand.Parameters.AddWithValue("EMAIL", customers.email);
+                sqlCommand.Parameters.AddWithValue("CITY", customers.city);
+                sqlCommand.Parameters.AddWithValue("CITY", customers.city);
+                sqlCommand.Parameters.AddWithValue("LOYALTY_POINTS", customers.loyaltyPoints);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public List<Customers> ListCustomers()
+        {
+            if (connectionStatus)
+            {
+                List<Customers> companyDetailsList = new List<Customers>();
+                Customers customers;
+                sqlCommand = new SqlCommand(LocalStoreProcedures.LIST_CUSTOMERS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                dataTable = new DataTable("Customers");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    customers = new Customers();
+                    customers.firstName = row[1].ToString();
+                    customers.lastName = row[2].ToString();
+                    customers.mobileNumber = Convert.ToInt32(row[3].ToString());
+                    customers.occupation = row[4].ToString();
+                    customers.dateOfBirth = row[5].ToString();
+                    customers.gender = row[6].ToString();
+                    customers.ageGroup = row[7].ToString();
+                    customers.communicationType = row[8].ToString();
+                    customers.email = row[9].ToString();
+                    customers.city = row[10].ToString();
+                    customers.loyaltyPoints = (float)Convert.ToDouble(row[11].ToString());
+                    companyDetailsList.Add(customers);
+                }
+                return companyDetailsList;
+            }
+            return new List<Customers>();
+        }
+        public Customers SlectCustomer(int mobileNumnber)
+        {
+            Customers customers = new Customers();
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.SELECT_CUSTOMER, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("MOBILE_NUMBER", mobileNumnber);
+                dataTable = new DataTable("Customers");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+                    customers.firstName = row[1].ToString();
+                    customers.lastName = row[2].ToString();
+                    customers.mobileNumber = Convert.ToInt32(row[3].ToString());
+                    customers.occupation = row[4].ToString();
+                    customers.dateOfBirth = row[5].ToString();
+                    customers.gender = row[6].ToString();
+                    customers.ageGroup = row[7].ToString();
+                    customers.communicationType = row[8].ToString();
+                    customers.email = row[9].ToString();
+                    customers.city = row[10].ToString();
+                    customers.loyaltyPoints = (float)Convert.ToDouble(row[11].ToString());
+                }
+            }
+            return customers;
+        }
+        public int UpdateLoyaltyPoints(float loyaltyPoints, int mobileNumnber)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.UPDATE_LOYALTY_POINTS_OF_CUSTOMER, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("LOYALTY_POINTS", loyaltyPoints);
+                sqlCommand.Parameters.AddWithValue("MOBILE_NUMBER", mobileNumnber);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public int UpdateCustomer(Customers customers, int previousMobilNumber)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.INSERT_CUSTOMERS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PREVIOUS_MOBILE_NUMBER", previousMobilNumber);
+                sqlCommand.Parameters.AddWithValue("FIRST_NAME", customers.firstName);
+                sqlCommand.Parameters.AddWithValue("LAST_NAME", customers.lastName);
+                sqlCommand.Parameters.AddWithValue("MOBILE_NUMBER", customers.mobileNumber);
+                sqlCommand.Parameters.AddWithValue("OCCUPATION", customers.occupation);
+                sqlCommand.Parameters.AddWithValue("DATE_OF_BIRTH", customers.dateOfBirth);
+                sqlCommand.Parameters.AddWithValue("GENDER", customers.gender);
+                sqlCommand.Parameters.AddWithValue("AGE_GROUP", customers.ageGroup);
+                sqlCommand.Parameters.AddWithValue("COMMUNICATION_TYPE", customers.communicationType);
+                sqlCommand.Parameters.AddWithValue("EMAIL", customers.email);
+                sqlCommand.Parameters.AddWithValue("CITY", customers.city);
+                sqlCommand.Parameters.AddWithValue("CITY", customers.city);
+                sqlCommand.Parameters.AddWithValue("LOYALTY_POINTS", customers.loyaltyPoints);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
         } 
         #endregion
     }

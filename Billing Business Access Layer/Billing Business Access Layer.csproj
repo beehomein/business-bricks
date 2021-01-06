@@ -44,12 +44,14 @@
     <Compile Include="BarcodeRegisterBALC.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CompanyDetailsBALC.cs" />
+    <Compile Include="CustomersBALC.cs" />
     <Compile Include="InventoryBALC.cs" />
     <Compile Include="NewGstBALC.cs" />
     <Compile Include="NewProductAttributesBALC.cs" />
     <Compile Include="NewProductBALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseOrderBALC.cs" />
+    <Compile Include="StockInwardBALC.cs" />
     <Compile Include="TransferOrderBALC.cs" />
   </ItemGroup>
   <ItemGroup>

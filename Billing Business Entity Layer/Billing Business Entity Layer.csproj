@@ -45,6 +45,7 @@
     <Compile Include="Brand.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CompanyDetails.cs" />
+    <Compile Include="Customers.cs" />
     <Compile Include="Division.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="GST.cs" />
