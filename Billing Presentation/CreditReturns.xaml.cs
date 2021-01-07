@@ -48,7 +48,7 @@ namespace Billing_Presentation
         private void customerNumberKeyup(object sender, KeyEventArgs e)
         {
             var customerNumber = CustomerNumber.Text;
-            if(customerNumber == "" || CustomerNumber.Text[0] == '0')
+            if(customerNumber == "" || customerNumber.Length < 10)
             {
                 CustomerNumber.BorderBrush = Brushes.Red;
                 CustomerNumber.BorderThickness = new Thickness(2);
@@ -63,7 +63,7 @@ namespace Billing_Presentation
         private void creditAmountKeyup(object sender, KeyEventArgs e)
         {
             var creditAmount = CreditAmount.Text;
-            if (creditAmount == "" || CreditAmount.Text[0] == '0')
+            if (creditAmount == "" || creditAmount.StartsWith("0"))
             {
                 CreditAmount.BorderBrush = Brushes.Red;
                 CreditAmount.BorderThickness = new Thickness(2);
@@ -119,21 +119,41 @@ namespace Billing_Presentation
                 CustomerName.BorderBrush = Brushes.Red;
                 CustomerName.BorderThickness = new Thickness(2);
             }
-            else if (customerNumber == "")
+            else if (customerNumber == "" || customerNumber.Length < 10)
             {
-                var customerNamePopup = new PopUps.Alert();
-                customerNamePopup.content.Text = "Please fill Customer Number!!!";
-                customerNamePopup.ShowDialog();
-                CustomerNumber.BorderBrush = Brushes.Red;
-                CustomerNumber.BorderThickness = new Thickness(2);
+                if (customerNumber.Length < 10)
+                {
+                    var customerNamePopup = new PopUps.Alert();
+                    customerNamePopup.content.Text = "Mobile Number cannot be less than 10!!!";
+                    customerNamePopup.ShowDialog();
+                }
+                else
+	            {
+                    var customerNamePopup = new PopUps.Alert();
+                    customerNamePopup.content.Text = "Please fill Customer Number!!!";
+                    customerNamePopup.ShowDialog();
+                    CustomerNumber.BorderBrush = Brushes.Red;
+                    CustomerNumber.BorderThickness = new Thickness(2); 
+                }
             }
-            else if (creditAmount == "")
+            else if (creditAmount == "" || creditAmount.StartsWith("0"))
             {
-                var customerNamePopup = new PopUps.Alert();
-                customerNamePopup.content.Text = "Please fill Credit Amount!!!";
-                customerNamePopup.ShowDialog();
-                CreditAmount.BorderBrush = Brushes.Red;
-                CreditAmount.BorderThickness = new Thickness(2);
+                if (creditAmount.StartsWith("0"))
+                {
+                    var customerNamePopup = new PopUps.Alert();
+                    customerNamePopup.content.Text = "Credit Amount should not start with Zero!!!";
+                    customerNamePopup.ShowDialog();
+                    CreditAmount.BorderBrush = Brushes.Red;
+                    CreditAmount.BorderThickness = new Thickness(2);
+                }
+                else
+                {
+                    var customerNamePopup = new PopUps.Alert();
+                    customerNamePopup.content.Text = "Please fill Credit Amount!!!";
+                    customerNamePopup.ShowDialog();
+                    CreditAmount.BorderBrush = Brushes.Red;
+                    CreditAmount.BorderThickness = new Thickness(2);
+                }
             }
             else
             {

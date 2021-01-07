@@ -78,6 +78,9 @@
     <Compile Include="Promotions\MultiplePromotion.xaml.cs">
       <DependentUpon>MultiplePromotion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Promotions\PricePromotion.xaml.cs">
+      <DependentUpon>PricePromotion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchCustomer.xaml.cs">
       <DependentUpon>SearchCustomer.xaml</DependentUpon>
     </Compile>
@@ -142,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Promotions\MultiplePromotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Promotions\PricePromotion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -94,3 +94,5 @@ C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debu
 C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.csproj.CopyComplete
 C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.exe
 C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Billing Presentation.pdb
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\PricePromotion.g.cs
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\Promotions\PricePromotion.baml

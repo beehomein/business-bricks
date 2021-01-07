@@ -26,7 +26,22 @@ namespace Billing_Presentation.Promotions
 
         private void submit(object sender, RoutedEventArgs e)
         {
-
+            var promotion = Promotion.Text;
+            if (promotion == "Individual Promotion")
+            {
+                var individualPromotion = new IndividualPromotion();
+                individualPromotion.Show();
+            }
+            else if(promotion == "Multiple Promotion")
+            {
+                var multiplePromotion = new MultiplePromotion();
+                multiplePromotion.Show();
+            }
+            else if(promotion == "Price Promotion")
+            {
+                var pricePromotion = new PricePromotion();
+                pricePromotion.Show();
+            }
         }
 
         private void close(object sender, RoutedEventArgs e)

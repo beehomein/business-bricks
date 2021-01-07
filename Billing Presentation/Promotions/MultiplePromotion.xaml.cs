@@ -58,7 +58,7 @@ namespace Billing_Presentation.Promotions
         private void FlatDiscount_KeyUp(object sender, KeyEventArgs e)
         {
             var FlatDiscount = flatDiscount.Text;
-            if (FlatDiscount == "")
+            if (FlatDiscount == "" || FlatDiscount.StartsWith("0"))
             {
                 flatDiscount.BorderBrush = Brushes.Red;
                 flatDiscount.BorderThickness = new Thickness(2);
@@ -73,7 +73,7 @@ namespace Billing_Presentation.Promotions
         private void Buy_KeyUp(object sender, KeyEventArgs e)
         {
             var Buy = buy.Text;
-            if (Buy == "")
+            if (Buy == "" || Buy.StartsWith("0"))
             {
                 buy.BorderBrush = Brushes.Red;
                 buy.BorderThickness = new Thickness(2);
@@ -90,8 +90,7 @@ namespace Billing_Presentation.Promotions
         {
             var i = BarcodeAdd.Children.Count;
             var textbox = new TextBox();
-
-            //FontSize = "20" Name = "Barcode" CharacterCasing = "Upper" Width = "300" Padding = "10, 5"
+            
             textbox.FontSize = 20;
             textbox.CharacterCasing = CharacterCasing.Upper;
             textbox.Width = 300;
@@ -142,16 +141,39 @@ namespace Billing_Presentation.Promotions
         private void flatOffer()
         {
             var FlatDiscount = flatDiscount.Text;
-            if (FlatDiscount == "")
+            var DiscountTypeFlat = discountTypeFlat.Text;
+            var description = "";
+            if (DiscountTypeFlat == "Percentage")
             {
-                var flatPopup = new PopUps.Alert();
-                flatPopup.content.Text = "Please Enter Flat discount!!!";
-                flatPopup.ShowDialog();
+                description = "Flat " + FlatDiscount + "% on";
+            }
+            else
+            {
+                description = "Flat Rs." + FlatDiscount; 
+            }
+            if (FlatDiscount == "" || FlatDiscount.StartsWith("0"))
+            {
+                if (FlatDiscount.StartsWith("0"))
+                {
+                    var flatPopup = new PopUps.Alert();
+                    flatPopup.content.Text = "Discount should not start with Zero!!!";
+                    flatPopup.ShowDialog();
+                    flatDiscount.BorderBrush = Brushes.Red;
+                    flatDiscount.BorderThickness = new Thickness(2);
+                }
+                else
+                {
+                    var flatPopup = new PopUps.Alert();
+                    flatPopup.content.Text = "Please Enter Flat discount!!!";
+                    flatPopup.ShowDialog();
+                    flatDiscount.BorderBrush = Brushes.Red;
+                    flatDiscount.BorderThickness = new Thickness(2);
+                }
             }
             else
             {
                 var flatConfirmPopup = new PopUps.Confirm();
-                flatConfirmPopup.content.Text = "Do you want to update?";
+                flatConfirmPopup.content.Text = "Do you want to update \"" + description + "\"?";
                 flatConfirmPopup.ShowDialog();
                 bool confirmResult = flatConfirmPopup.result;
                 if (confirmResult)
@@ -166,16 +188,39 @@ namespace Billing_Presentation.Promotions
         private void buyOffer()
         {
             var Buy = buy.Text;
-            if (Buy == "")
+            var BarcodeCombo = barcodeCombo.Text;
+            var description = "Buy this combo Get " + Buy + " products of " + BarcodeCombo + " as free!";
+            if (Buy == "" || Buy.StartsWith("0"))
             {
-                var buyPopup = new PopUps.Alert();
-                buyPopup.content.Text = "Please Enter Get discount!!!";
-                buyPopup.ShowDialog();
+                if (Buy.StartsWith("0"))
+                {
+                    var buyPopup = new PopUps.Alert();
+                    buyPopup.content.Text = "Discount should not start with Zero!!!";
+                    buyPopup.ShowDialog();
+                    buy.BorderBrush = Brushes.Red;
+                    buy.BorderThickness = new Thickness(2); 
+                }
+                else
+                {
+                    var buyPopup = new PopUps.Alert();
+                    buyPopup.content.Text = "Please Enter Get discount!!!";
+                    buyPopup.ShowDialog();
+                    buy.BorderBrush = Brushes.Red;
+                    buy.BorderThickness = new Thickness(2);
+                }
+            }
+            else if (BarcodeCombo == "Select Barcode")
+            {
+                var BarcodeComboPopup = new PopUps.Alert();
+                BarcodeComboPopup.content.Text = "Please Select Barcode!!!";
+                BarcodeComboPopup.ShowDialog();
             }
             else
             {
                 var buyConfirmPopup = new PopUps.Confirm();
-                buyConfirmPopup.content.Text = "Do you want to update?";
+                buyConfirmPopup.content.Text = "Do you want to update \"" + description + "\"? ";
+                buyConfirmPopup.content.TextWrapping = TextWrapping.WrapWithOverflow;
+                buyConfirmPopup.content.Width = 400;
                 buyConfirmPopup.ShowDialog();
                 bool confirmResult = buyConfirmPopup.result;
                 if (confirmResult)
@@ -186,16 +231,51 @@ namespace Billing_Presentation.Promotions
                 }
             }
         }
+
         private void submit(object sender, RoutedEventArgs e)
         {
+            var Count = count();
             var OfferType = offerType.Text;
-            if (OfferType == "Flat")
+
+            if (Count == 1)
             {
-                flatOffer();
+                if (OfferType == "Flat")
+                {
+                    flatOffer();
+                }
+                else if (OfferType == "Buy and Get Free")
+                {
+                    buyOffer();
+                } 
             }
-            else if (OfferType == "Buy and Get Free")
+            else
             {
-                buyOffer();
+                var barcodeEmpty = new PopUps.Alert();
+                barcodeEmpty.content.Text = "Fill all barcode!!!";
+                barcodeEmpty.ShowDialog();
+            }
+        }
+        public int count()
+        {
+            var Newtextbox = BarcodeAdd.Children.OfType<TextBox>();
+            var actualLength = Newtextbox.Count();
+            var nonEmptyBarcodeLength = 0;
+            foreach (var text in Newtextbox)
+            {
+                var textelement = (TextBox)text;
+                var textboxes = textelement.Text;
+                if(textboxes != "")
+                {
+                    nonEmptyBarcodeLength++;
+                }
+            }
+            if (actualLength == nonEmptyBarcodeLength)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
             }
         }
     }

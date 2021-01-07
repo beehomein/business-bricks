@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ABHISHEK\source\repos\Billing Presentation\obj\Debug\
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\obj\Debug\
 Billing_Presentation
 none
 false
 DEBUG;TRACE
-C:\Users\ABHISHEK\source\repos\Billing Presentation\App.xaml
-151359966206
+C:\Users\ABHISHEK\Documents\GitHub\business-bricks\Billing Presentation\App.xaml
+16-1840906620
 
-23-1578087883
-16524604061
-ConnectionStatus.xaml;CreditReturns.xaml;Dashboard.xaml;MainWindow.xaml;NewCustomerRegistration.xaml;PopUps\Alert.xaml;PopUps\Confirm.xaml;PopUps\Failed.xaml;PopUps\Success.xaml;PopUps\Warning.xaml;PriceOverride.xaml;Promotions\CreatePromotion.xaml;Promotions\IndividualPromotion.xaml;Promotions\MultiplePromotion.xaml;SearchCustomer.xaml;
+24-1117836516
+161475265579
+ConnectionStatus.xaml;CreditReturns.xaml;Dashboard.xaml;MainWindow.xaml;NewCustomerRegistration.xaml;PopUps\Alert.xaml;PopUps\Confirm.xaml;PopUps\Failed.xaml;PopUps\Success.xaml;PopUps\Warning.xaml;PriceOverride.xaml;Promotions\CreatePromotion.xaml;Promotions\IndividualPromotion.xaml;Promotions\MultiplePromotion.xaml;Promotions\PricePromotion.xaml;SearchCustomer.xaml;
 
 False
 

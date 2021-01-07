@@ -54,7 +54,7 @@ namespace Billing_Presentation.Promotions
         private void flatDiscountKeyUp(object sender, KeyEventArgs e)
         {
             var FlatDiscount = flatDiscount.Text;
-            if (FlatDiscount == "")
+            if (FlatDiscount == "" || FlatDiscount.StartsWith("0"))
             {
                 flatDiscount.BorderThickness = new Thickness(2);
                 flatDiscount.BorderBrush = Brushes.Red;
@@ -69,7 +69,7 @@ namespace Billing_Presentation.Promotions
         private void onBulkDiscountKeyUp(object sender, KeyEventArgs e)
         {
             var OnBulk = onBulk.Text;
-            if(OnBulk == "")
+            if(OnBulk == "" || OnBulk.StartsWith("0"))
             {
                 onBulk.BorderThickness = new Thickness(2);
                 onBulk.BorderBrush = Brushes.Red;
@@ -84,7 +84,7 @@ namespace Billing_Presentation.Promotions
         private void flatBulkDiscountKeyUp(object sender, KeyEventArgs e)
         {
             var FlatBulk = flatBulk.Text;
-            if (FlatBulk == "")
+            if (FlatBulk == "" || FlatBulk.StartsWith("0"))
             {
                 flatBulk.BorderThickness = new Thickness(2);
                 flatBulk.BorderBrush = Brushes.Red;
@@ -99,7 +99,7 @@ namespace Billing_Presentation.Promotions
         private void buyKeyUp(object sender, KeyEventArgs e)
         {
             var Buy = buy.Text;
-            if (Buy == "")
+            if (Buy == "" || Buy.StartsWith("0"))
             {
                 buy.BorderThickness = new Thickness(2);
                 buy.BorderBrush = Brushes.Red;
@@ -114,7 +114,7 @@ namespace Billing_Presentation.Promotions
         private void getKeyUp(object sender, KeyEventArgs e)
         {
             var Get = get.Text;
-            if(Get == "")
+            if(Get == "" || Get.StartsWith("0"))
             {
                 get.BorderThickness = new Thickness(2);
                 get.BorderBrush = Brushes.Red;
@@ -175,11 +175,22 @@ namespace Billing_Presentation.Promotions
                 description = "flat Rs." + FlatDiscount + " on Arrow(" + barcode + ")";
             }
 
-            if (FlatDiscount == "")
+            if (FlatDiscount == "" || FlatDiscount.StartsWith("0"))
             {
-                var dicountPopup = new PopUps.Alert();
-                dicountPopup.content.Text = "Please enter discount value!!!";
-                dicountPopup.ShowDialog();
+                if (FlatDiscount.StartsWith("0"))
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Discount should not starts with Zero!!!";
+                    dicountPopup.ShowDialog();
+                }
+                else
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Please enter discount value!!!";
+                    dicountPopup.ShowDialog();
+                    flatDiscount.BorderThickness = new Thickness(2);
+                    flatDiscount.BorderBrush = Brushes.Red;
+                }
             }
 
             else
@@ -221,18 +232,47 @@ namespace Billing_Presentation.Promotions
                 var dicountPopup = new PopUps.Alert();
                 dicountPopup.content.Text = "Please enter On and Flat value!!!";
                 dicountPopup.ShowDialog();
+                onBulk.BorderThickness = new Thickness(2);
+                onBulk.BorderBrush = Brushes.Red;
+                flatBulk.BorderThickness = new Thickness(2);
+                flatBulk.BorderBrush = Brushes.Red;
+
             }
-            else if (OnBulk == "")
+            else if (OnBulk == "" || OnBulk.StartsWith("0"))
             {
-                var dicountPopup = new PopUps.Alert();
-                dicountPopup.content.Text = "Please enter On value!!!";
-                dicountPopup.ShowDialog();
+                if (OnBulk.StartsWith("0"))
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "On Value should not starts with Zero!!!";
+                    dicountPopup.ShowDialog();
+                }
+                else
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Please enter On value!!!";
+                    dicountPopup.ShowDialog();
+                    onBulk.BorderThickness = new Thickness(2);
+                    onBulk.BorderBrush = Brushes.Red;
+                }
+                
             }
-            else if (FlatBulk == "")
+            else if (FlatBulk == "" || FlatBulk.StartsWith("0"))
             {
-                var dicountPopup = new PopUps.Alert();
-                dicountPopup.content.Text = "Please enter Flat value!!!";
-                dicountPopup.ShowDialog();
+                if (FlatBulk.StartsWith("0"))
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Flat Value should not starts with Zero!!!";
+                    dicountPopup.ShowDialog();
+                }
+                else
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Please enter Flat value!!!";
+                    dicountPopup.ShowDialog();
+                    flatBulk.BorderThickness = new Thickness(2);
+                    flatBulk.BorderBrush = Brushes.Red;
+                }
+                
             }
             else
             {
@@ -264,18 +304,45 @@ namespace Billing_Presentation.Promotions
                 var dicountPopup = new PopUps.Alert();
                 dicountPopup.content.Text = "Please enter Buy and Get Free value!!!";
                 dicountPopup.ShowDialog();
+                buy.BorderThickness = new Thickness(2);
+                buy.BorderBrush = Brushes.Red;
+                get.BorderThickness = new Thickness(2);
+                get.BorderBrush = Brushes.Red;
+
             }
-            else if (Buy == "")
+            else if (Buy == "" || Buy.StartsWith("0"))
             {
-                var dicountPopup = new PopUps.Alert();
-                dicountPopup.content.Text = "Please enter Buy value!!!";
-                dicountPopup.ShowDialog();
+                if (Buy.StartsWith("0"))
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Buy value should not starts with Zero!!!";
+                    dicountPopup.ShowDialog();
+                }
+                else
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Please enter Buy value!!!";
+                    dicountPopup.ShowDialog();
+                    buy.BorderThickness = new Thickness(2);
+                    buy.BorderBrush = Brushes.Red;
+                }
             }
-            else if (Get == "")
+            else if (Get == "" || Get.StartsWith("0"))
             {
-                var dicountPopup = new PopUps.Alert();
-                dicountPopup.content.Text = "Please enter Get value!!!";
-                dicountPopup.ShowDialog();
+                if (Get.StartsWith("0"))
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Get value should not starts with Zero!!!";
+                    dicountPopup.ShowDialog();
+                }
+                else
+                {
+                    var dicountPopup = new PopUps.Alert();
+                    dicountPopup.content.Text = "Please enter Get value!!!";
+                    dicountPopup.ShowDialog();
+                    get.BorderThickness = new Thickness(2);
+                    get.BorderBrush = Brushes.Red;
+                }
             }
             else
             {
@@ -307,6 +374,8 @@ namespace Billing_Presentation.Promotions
                 var barcodePopup = new PopUps.Alert();
                 barcodePopup.content.Text = "Please fill the Barcode!!!";
                 barcodePopup.ShowDialog();
+                Barcode.BorderThickness = new Thickness(2);
+                Barcode.BorderBrush = Brushes.Red;
             }
             else if (OfferType == "Flat")
             {

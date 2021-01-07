@@ -24,8 +24,7 @@
                     <ComboBox.LayoutTransform>
                         <ScaleTransform ScaleX="1.4" ScaleY="1.4" />
                     </ComboBox.LayoutTransform>
-                    <ComboBoxItem Content="Select Promotion Type" IsSelected="True" IsEnabled="False" />
-                    <ComboBoxItem Content="Individual Promotion" />
+                    <ComboBoxItem IsSelected="True" Content="Individual Promotion" />
                     <ComboBoxItem Content="Multiple Promotion" />
                     <ComboBoxItem Content="Price Promotion" />
                 </ComboBox>

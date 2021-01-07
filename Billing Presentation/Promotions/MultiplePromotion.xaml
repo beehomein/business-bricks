@@ -102,7 +102,7 @@
                         <TextBox Name="buy" Width="70" FontSize="18" Padding="10,5" Margin="10,0,0,0"
                              MaxLength="4" KeyUp="Buy_KeyUp" PreviewTextInput="NumberValidation"/>
                         <TextBlock Text="Products of" FontSize="18" VerticalAlignment="Center" Margin="10,0,0,0"/>
-                        <ComboBox FontSize="16" Width="145" Padding="10,10" HorizontalAlignment="Center" 
+                        <ComboBox Name="barcodeCombo" FontSize="16" Width="145" Padding="10,10" HorizontalAlignment="Center" 
                                   VerticalAlignment="Center" Margin="10,0,0,0" IsTextSearchEnabled="True" IsEditable="True" 
                                   StaysOpenOnEdit="True">
                             <ComboBoxItem IsSelected="True" IsEnabled="False">Select Barcode</ComboBoxItem>
