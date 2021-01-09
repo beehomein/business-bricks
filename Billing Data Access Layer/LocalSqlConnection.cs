@@ -66,5 +66,17 @@ namespace Billing_Data_Access_Layer
         public const string DELETE_INDIVIDUAL_PROMOTION = "USP_DELETE_INDIVIDUAL_PROMOTION";
         public const string LIST_INDIVIDUAL_PROMOTIONS = "USP_LIST_INDIVIDUAL_PROMOTIONS";
         public const string SELECT_INDIVIDUAL_PROMOTIONS = "USP_SELECT_INDIVIDUAL_PROMOTIONS";
+        //multiple promotions
+        public const string INSERT_MULTIPLE_PROMOTION = "USP_INSERT_MULTIPLE_PROMOTION";
+        public const string UPDATE_MULTIPLE_PROMOTION = "USP_UPDATE_MULTIPLE_PROMOTION";
+        public const string DELETE_MULTIPLE_PROMOTION = "USP_DELETE_MULTIPLE_PROMOTION";
+        public const string LIST_MULTIPLE_PROMOTIONS = "USP_LIST_MULTIPLE_PROMOTIONS";
+        public const string SELECT_MULTIPLE_PROMOTIONS = "USP_SELECT_MULTIPLE_PROMOTIONS";
+        //price promotions
+        public const string INSERT_PRICE_PROMOTIONS = "USP_INSERT_PRICE_PROMOTIONS";
+        public const string UPDATE_PRICE_PROMOTIONS = "USP_UPDATE_PRICE_PROMOTIONS";
+        public const string DELETE_PRICE_PROMOTIONS = "USP_DELETE_PRICE_PROMOTIONS";
+        public const string LIST_PRICE_PROMOTIONS = "USP_LIST_PRICE_PROMOTIONS";
+        public const string SELECT_PRICE_PROMOTIONS = "USP_SELECT_PRICE_PROMOTIONS";
     }
 }

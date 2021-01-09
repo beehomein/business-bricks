@@ -51,7 +51,9 @@
     <Compile Include="GST.cs" />
     <Compile Include="IndividualPromotions.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="MultiplePromotions.cs" />
     <Compile Include="NewProduct.cs" />
+    <Compile Include="PricePromotions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseDetailsList.cs" />
     <Compile Include="PurchasesList.cs" />

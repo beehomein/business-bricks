@@ -1062,13 +1062,14 @@ namespace Billing_Data_Access_Layer
             }
             return new List<IndividualPromotions>();
         }
-        public IndividualPromotions SelectIndividualPromotions()
+        public IndividualPromotions SelectIndividualPromotions(string promotionId)
         {
             IndividualPromotions individualPromotions = new IndividualPromotions();
             if (connectionStatus)
             {
                 sqlCommand = new SqlCommand(LocalStoreProcedures.SELECT_INDIVIDUAL_PROMOTIONS, sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", promotionId);
                 dataTable = new DataTable("Individual Promotion");
                 sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                 sqlDataAdapter.Fill(dataTable);
@@ -1086,8 +1087,196 @@ namespace Billing_Data_Access_Layer
                 }
             }
             return individualPromotions;
-        } 
+        }
         #endregion
 
+        #region Multiple Promotions
+        public int InsertMultiplePromotion(MultiplePromotions multiplePromotions)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.INSERT_MULTIPLE_PROMOTION, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("BARCODE_IDS", multiplePromotions.barcodeIds);
+                sqlCommand.Parameters.AddWithValue("OFFER_TYPE", multiplePromotions.offerType);
+                sqlCommand.Parameters.AddWithValue("COLUMN_1", multiplePromotions.column1);
+                sqlCommand.Parameters.AddWithValue("COLUMN_2", multiplePromotions.column2);
+                sqlCommand.Parameters.AddWithValue("DESCRIPTION", multiplePromotions.description);
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", multiplePromotions.promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public int UpdateMultiplePromotion(MultiplePromotions multiplePromotions)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.UPDATE_MULTIPLE_PROMOTION, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("BARCODE_IDS", multiplePromotions.barcodeIds);
+                sqlCommand.Parameters.AddWithValue("OFFER_TYPE", multiplePromotions.offerType);
+                sqlCommand.Parameters.AddWithValue("COLUMN_1", multiplePromotions.column1);
+                sqlCommand.Parameters.AddWithValue("COLUMN_2", multiplePromotions.column2);
+                sqlCommand.Parameters.AddWithValue("DESCRIPTION", multiplePromotions.description);
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", multiplePromotions.promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public int DeleteMultiplePromotion(string promotionId)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.DELETE_MULTIPLE_PROMOTION, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public List<MultiplePromotions> ListMultiplePromotion()
+        {
+            if (connectionStatus)
+            {
+                List<MultiplePromotions> multiplePromotionsList = new List<MultiplePromotions>();
+                MultiplePromotions multiplePromotions;
+                sqlCommand = new SqlCommand(LocalStoreProcedures.LIST_MULTIPLE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                dataTable = new DataTable("Multiple Promotion");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    multiplePromotions = new MultiplePromotions();
+                    multiplePromotions.barcodeIds = row[1].ToString();
+                    multiplePromotions.offerType = row[2].ToString();
+                    multiplePromotions.column1 = row[3].ToString();
+                    multiplePromotions.column2 = row[4].ToString();
+                    multiplePromotions.description = row[5].ToString();
+                    multiplePromotions.promotionId = row[6].ToString();
+                    multiplePromotionsList.Add(multiplePromotions);
+                }
+                return multiplePromotionsList;
+            }
+            return new List<MultiplePromotions>();
+        }
+        public MultiplePromotions SelectMultiplePromotions(string promotionId)
+        {
+            MultiplePromotions multiplePromotions = new MultiplePromotions();
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.LIST_MULTIPLE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", promotionId);
+                dataTable = new DataTable("Multiple Promotion");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+                    multiplePromotions.barcodeIds = row[1].ToString();
+                    multiplePromotions.offerType = row[2].ToString();
+                    multiplePromotions.column1 = row[3].ToString();
+                    multiplePromotions.column2 = row[4].ToString();
+                    multiplePromotions.description = row[5].ToString();
+                    multiplePromotions.promotionId = row[6].ToString();
+                    return multiplePromotions;
+                }
+            }
+            return multiplePromotions;
+        } 
+        #endregion
+        public int InsertPricePromotion(PricePromotions pricePromotions)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.INSERT_PRICE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("ABOVE", pricePromotions.above);
+                sqlCommand.Parameters.AddWithValue("FLAT", pricePromotions.flat);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_TYPE", pricePromotions.discountType);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_VALUE", pricePromotions.discountValue);
+                sqlCommand.Parameters.AddWithValue("DESCRIPTION", pricePromotions.description);
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", pricePromotions.promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }        
+        public int UpdatePricePromotion(PricePromotions pricePromotions)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.UPDATE_PRICE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("ABOVE", pricePromotions.above);
+                sqlCommand.Parameters.AddWithValue("FLAT", pricePromotions.flat);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_TYPE", pricePromotions.discountType);
+                sqlCommand.Parameters.AddWithValue("DISCOUNT_VALUE", pricePromotions.discountValue);
+                sqlCommand.Parameters.AddWithValue("DESCRIPTION", pricePromotions.description);
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", pricePromotions.promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public int DeletePricePromotion(string promotionId)
+        {
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.DELETE_PRICE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", promotionId);
+                return sqlCommand.ExecuteNonQuery();
+            }
+            return 0;
+        }
+        public List<PricePromotions> ListPricePromotion()
+        {
+            if (connectionStatus)
+            {
+                List<PricePromotions> pricePromotionsList = new List<PricePromotions>();
+                PricePromotions pricePromotions;
+                sqlCommand = new SqlCommand(LocalStoreProcedures.LIST_MULTIPLE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                dataTable = new DataTable("Price Promotion");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    pricePromotions = new PricePromotions();
+                    pricePromotions.above = Convert.ToInt32(row[1].ToString());
+                    pricePromotions.flat = Convert.ToInt32(row[2].ToString());
+                    pricePromotions.discountType = row[3].ToString() ;
+                    pricePromotions.discountValue = Convert.ToInt32(row[4].ToString());
+                    pricePromotions.description = row[5].ToString();
+                    pricePromotions.promotionId = row[6].ToString();
+                    pricePromotionsList.Add(pricePromotions);
+                }
+                return pricePromotionsList;
+            }
+            return new List<PricePromotions>();
+        }
+        public PricePromotions SelectPricePromotions(string promotionId)
+        {
+            PricePromotions pricePromotions = new PricePromotions();
+            if (connectionStatus)
+            {
+                sqlCommand = new SqlCommand(LocalStoreProcedures.LIST_MULTIPLE_PROMOTIONS, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("PROMOTION_ID", promotionId);
+                dataTable = new DataTable("Multiple Promotion");
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+                    pricePromotions.above = Convert.ToInt32(row[1].ToString());
+                    pricePromotions.flat = Convert.ToInt32(row[2].ToString());
+                    pricePromotions.discountType = row[3].ToString();
+                    pricePromotions.discountValue = Convert.ToInt32(row[4].ToString());
+                    pricePromotions.description = row[5].ToString();
+                    pricePromotions.promotionId = row[6].ToString();
+                    return pricePromotions;
+                }
+            }
+            return pricePromotions;
+        }
     }
 }

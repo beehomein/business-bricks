@@ -31,10 +31,10 @@ namespace Billing_Business_Access_Layer
             connection = new Connection();
             return connection.ListIndividualPromotion();
         }
-        public IndividualPromotions SelectIndividualPromotions()
+        public IndividualPromotions SelectIndividualPromotions(string promotionId)
         {
             connection = new Connection();
-            return connection.SelectIndividualPromotions();
+            return connection.SelectIndividualPromotions(promotionId);
         }
     }
 }

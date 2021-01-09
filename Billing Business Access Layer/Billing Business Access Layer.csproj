@@ -47,9 +47,11 @@
     <Compile Include="CustomersBALC.cs" />
     <Compile Include="IndividualPromotionsBALC.cs" />
     <Compile Include="InventoryBALC.cs" />
+    <Compile Include="MultiplePromotionsBALC.cs" />
     <Compile Include="NewGstBALC.cs" />
     <Compile Include="NewProductAttributesBALC.cs" />
     <Compile Include="NewProductBALC.cs" />
+    <Compile Include="PricePromotionsBALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseOrderBALC.cs" />
     <Compile Include="StockInwardBALC.cs" />
